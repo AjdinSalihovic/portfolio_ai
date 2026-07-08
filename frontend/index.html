@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajdin Salihović — Data & ML Engineer</title>
+  <meta name="description" content="Ajdin Salihović builds data pipelines, enrichment systems, and AI automation for investment operations. Lead data engineering at AQVC Raise, co-founder of Emanet AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%230F766E' stroke-width='8'/><circle cx='50' cy='50' r='12' fill='%230F766E'/></svg>" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Ajdin Salihović</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact" class="nav-cta">Get in touch</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow mono">DATA ENGINEER · ML ENGINEER · AUTOMATION</p>
+      <h1 class="hero-title">
+        I build the pipelines behind<br />
+        <span class="accent">investment decisions.</span>
+      </h1>
+      <p class="hero-sub">
+        Lead data engineering &amp; automation at <strong>AQVC Raise</strong> — LP investor intelligence,
+        enrichment pipelines, and fund placement operations. Co-founder of <strong>Emanet AI</strong>.
+        Based in Bosnia &amp; Herzegovina, working worldwide.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Work with me</a>
+        <a href="https://www.linkedin.com/in/ajdin-salihovic/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
+      </div>
+
+      <!-- Signature: animated data pipeline -->
+      <div class="pipeline" aria-label="Animated diagram of a data pipeline: sources flow through ingestion and enrichment to delivery">
+        <svg viewBox="0 0 1040 240" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet">
+          <!-- paths -->
+          <path id="p1" class="pipe" d="M 120 60  C 220 60, 240 120, 340 120" />
+          <path id="p2" class="pipe" d="M 120 120 L 340 120" />
+          <path id="p3" class="pipe" d="M 120 180 C 220 180, 240 120, 340 120" />
+          <path id="p4" class="pipe" d="M 460 120 L 640 120" />
+          <path id="p5" class="pipe" d="M 760 120 C 830 120, 850 70, 920 70" />
+          <path id="p6" class="pipe" d="M 760 120 C 830 120, 850 170, 920 170" />
+
+          <!-- source nodes -->
+          <g class="node node-src">
+            <rect x="20" y="38" width="100" height="44" rx="8" />
+            <text x="70" y="65" class="node-label">APIs</text>
+          </g>
+          <g class="node node-src">
+            <rect x="20" y="98" width="100" height="44" rx="8" />
+            <text x="70" y="125" class="node-label">Scrapers</text>
+          </g>
+          <g class="node node-src">
+            <rect x="20" y="158" width="100" height="44" rx="8" />
+            <text x="70" y="185" class="node-label">Databases</text>
+          </g>
+
+          <!-- stage nodes -->
+          <g class="node node-stage">
+            <rect x="340" y="92" width="120" height="56" rx="10" />
+            <text x="400" y="116" class="node-label strong">Ingestion</text>
+            <text x="400" y="134" class="node-sub">Python · SQL</text>
+          </g>
+          <g class="node node-stage">
+            <rect x="640" y="92" width="120" height="56" rx="10" />
+            <text x="700" y="116" class="node-label strong">Enrichment</text>
+            <text x="700" y="134" class="node-sub">LLMs · QA rules</text>
+          </g>
+
+          <!-- output nodes -->
+          <g class="node node-out">
+            <rect x="920" y="46" width="104" height="46" rx="8" />
+            <text x="972" y="66" class="node-label strong">Apps</text>
+            <text x="972" y="83" class="node-sub">LP Atlas</text>
+          </g>
+          <g class="node node-out">
+            <rect x="920" y="146" width="104" height="46" rx="8" />
+            <text x="972" y="166" class="node-label strong">Insights</text>
+            <text x="972" y="183" class="node-sub">LP lists · IIP</text>
+          </g>
+
+          <!-- animated packets (positions driven by JS) -->
+          <g class="packets">
+            <circle class="packet" r="4.5" data-path="p1" data-offset="0" />
+            <circle class="packet" r="4.5" data-path="p2" data-offset="0.35" />
+            <circle class="packet" r="4.5" data-path="p3" data-offset="0.65" />
+            <circle class="packet" r="4.5" data-path="p4" data-offset="0.2" />
+            <circle class="packet" r="4.5" data-path="p4" data-offset="0.7" />
+            <circle class="packet" r="4.5" data-path="p5" data-offset="0.45" />
+            <circle class="packet" r="4.5" data-path="p6" data-offset="0.1" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROOF STRIP ============ -->
+  <section class="strip">
+    <div class="strip-inner mono">
+      <div class="strip-item"><span class="strip-num" data-count="3000">0</span><span class="strip-plus">+</span><span class="strip-label">domains processed in a single discovery pipeline</span></div>
+      <div class="strip-item"><span class="strip-num" data-count="1125">0</span><span class="strip-plus">+</span><span class="strip-label">investors screened against a maintained master blacklist</span></div>
+      <div class="strip-item"><span class="strip-num" data-count="4">0</span><span class="strip-plus"></span><span class="strip-label">languages shipped on one production website</span></div>
+      <div class="strip-item"><span class="strip-num" data-count="2">0</span><span class="strip-plus"></span><span class="strip-label">MSc degrees — Financial Engineering &amp; Data Science</span></div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT I DO ============ -->
+  <section class="section" id="services">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="eyebrow mono">WHAT I DO</p>
+        <h2>Three disciplines, one goal:<br />data you can act on.</h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <h3>Data engineering</h3>
+          <p>End-to-end pipelines: scraping and API ingestion, normalization, deduplication, enrichment, and delivery into the tools teams actually use — Airtable, Notion, spreadsheets, or custom apps.</p>
+          <p class="card-tags mono">Python · SQL · FastAPI · Pandas · ETL</p>
+        </article>
+        <article class="card reveal">
+          <h3>AI &amp; ML automation</h3>
+          <p>LLM-powered enrichment, semantic filtering, and quality-assurance layers that turn raw web data into structured, trustworthy records — with review workflows humans can audit.</p>
+          <p class="card-tags mono">LLM pipelines · semantic search · AI QA</p>
+        </article>
+        <article class="card reveal">
+          <h3>Investor data operations</h3>
+          <p>LP and investor intelligence for VC/PE: Ideal Investor Profile analysis, prospect list construction with strict quality rules, blacklist screening, and addressable-market sizing.</p>
+          <p class="card-tags mono">LP research · IIP analysis · fund placement</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="currentColor" stroke-width="4">
+        <circle cx="60" cy="60" r="44" />
+        <circle cx="60" cy="60" r="12" />
+        <path d="M60 16 L60 34 M60 86 L60 104 M16 60 L34 60 M86 60 L104 60" />
+        <path d="M29 29 L41 41 M79 79 L91 91 M91 29 L79 41 M41 79 L29 91" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- ============ SELECTED WORK ============ -->
+  <section class="section section-alt" id="work">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="eyebrow mono">SELECTED WORK</p>
+        <h2>Systems in production.</h2>
+      </div>
+
+      <div class="work-list">
+        <article class="work reveal">
+          <div class="work-meta mono">
+            <span>AQVC RAISE</span><span>FULL-STACK DATA APP</span>
+          </div>
+          <h3>LP Atlas — investor enrichment platform</h3>
+          <p>A production enrichment application for LP investor data: duplicate detection, field-level diff and review workflows, CSV normalization, rate-limited API integration, and staging/production environment controls. Built with Next.js 15 and FastAPI, deployed on Render.</p>
+          <p class="work-stack mono">Next.js 15 · FastAPI · Python · Render</p>
+        </article>
+
+        <article class="work reveal">
+          <div class="work-meta mono">
+            <span>DISCOVERY PIPELINE</span><span>ML / NLP</span>
+          </div>
+          <h3>Automated URL discovery at scale</h3>
+          <p>An automated discovery and semantic relevance filtering pipeline evaluated across roughly 3,000 domains — turning an open-ended web search problem into a ranked, reviewable shortlist.</p>
+          <p class="work-stack mono">Python · semantic filtering · crawling</p>
+        </article>
+
+        <article class="work reveal">
+          <div class="work-meta mono">
+            <span>INVESTOR INTELLIGENCE</span><span>DATA PRODUCT</span>
+          </div>
+          <h3>Curated LP intelligence, weekly</h3>
+          <p>Recurring, quality-controlled LP lists for a professional investor audience: strict inclusion rules, a standardized 14-column data format, and screening against a maintained blacklist of 1,125+ already-covered investors — across European, UAE, Asian, and global geographies.</p>
+          <p class="work-stack mono">Research ops · data QA · publishing</p>
+        </article>
+
+        <article class="work reveal">
+          <div class="work-meta mono">
+            <span>EMANET AI</span><span>CO-FOUNDER</span>
+          </div>
+          <h3>An AI agency built on trust</h3>
+          <p>Co-founded Emanet AI — an agency for AI automation, data engineering, web and app development, and AI QA. Led the multilingual website (English, Bosnian, Arabic, German), brand identity, and go-to-market infrastructure. The name comes from <em>amanah</em>: something entrusted to your care.</p>
+          <p class="work-stack mono">AI automation · web development · brand</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="eyebrow mono">EXPERIENCE</p>
+        <h2>Where I've built.</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-when mono">CURRENT</div>
+          <div class="tl-body">
+            <h3>Lead Data Engineering &amp; Automation — AQVC Raise</h3>
+            <p>LP investor research and data infrastructure for VC/PE fund placement: enrichment pipelines, scraper infrastructure, IIP analysis, and internal tooling across Airtable, Notion, and custom apps.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-when mono">CURRENT</div>
+          <div class="tl-body">
+            <h3>Co-founder — Emanet AI</h3>
+            <p>AI automation, data engineering, web/app development, and AI QA engineering for clients across markets.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-when mono">EARLIER</div>
+          <div class="tl-body">
+            <h3>Data &amp; software roles</h3>
+            <p>Engineering and data positions spanning Endava, Virgin Pulse, Falcony AI, Quantox Technology, and ABC Tech Group — from product data systems to ML-adjacent tooling.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-when mono">EDUCATION</div>
+          <div class="tl-body">
+            <h3>MSc Financial Engineering · MSc Data Science</h3>
+            <p>WorldQuant University (Financial Engineering) and International Burch University (Data Science) — the quantitative backbone behind the pipelines.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STACK ============ -->
+  <section class="section section-alt" id="stack">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="eyebrow mono">STACK</p>
+        <h2>Tools I reach for.</h2>
+      </div>
+      <ul class="stack-grid mono reveal">
+        <li>Python</li><li>SQL</li><li>FastAPI</li><li>Pandas</li>
+        <li>Next.js</li><li>TypeScript</li><li>Playwright</li><li>BeautifulSoup</li>
+        <li>Airtable API</li><li>Notion API</li><li>Zapier</li><li>Render</li>
+        <li>LLM APIs</li><li>Vector search</li><li>Git</li><li>Excel automation</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="section-inner contact-grid">
+      <div class="contact-copy reveal">
+        <p class="eyebrow mono">CONTACT</p>
+        <h2>Have a data problem?<br /><span class="accent">Let's talk.</span></h2>
+        <p>Whether it's a pipeline that needs building, investor data that needs structure, or an automation that would save your team a week every month — send a message and I'll reply personally.</p>
+        <p class="contact-alt mono">Prefer email directly? <a href="mailto:you@example.com" id="mailto-link">you@example.com</a></p>
+      </div>
+      <form class="contact-form reveal" id="contact-form" novalidate>
+        <div class="field">
+          <label for="cf-name">Your name</label>
+          <input type="text" id="cf-name" name="name" required autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="cf-email">Your email</label>
+          <input type="email" id="cf-email" name="email" required autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="cf-message">What are you building?</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="cf-submit">Send message</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="mono">© <span id="year"></span> Ajdin Salihović — Tuzla, Bosnia &amp; Herzegovina</p>
+      <div class="footer-links mono">
+        <a href="https://www.linkedin.com/in/ajdin-salihovic/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
