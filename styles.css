@@ -162,6 +162,22 @@ p { margin: 0 0 1em; }
 .lang-btn:hover { border-color: var(--pine); color: var(--ink); }
 .lang-btn.active { background: var(--pine-soft); border-color: var(--pine); color: var(--pine); }
 
+/* substack link inline in the nav row */
+.nav-substack {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  text-decoration: none;
+  margin: 0 10px;
+  white-space: nowrap;
+}
+.nav-substack .icon { width: 11px; height: 11px; }
+.nav-substack:hover { color: var(--pine); }
+
 /* --------------------------- hero --------------------------- */
 .hero { padding: 72px 0 40px; }
 .hero .title-line { color: var(--pine); }
@@ -391,7 +407,7 @@ h3 .icon { width: 18px; height: 18px; vertical-align: -2px; margin-right: 2px; }
 .social-btn .icon { width: 18px; height: 18px; }
 
 /* ---------------------- substack promo ----------------------- */
-.promo-wrap { padding-top: 6px; padding-bottom: 6px; }
+.hero .promo { margin-top: 26px; }
 .promo {
   display: flex;
   align-items: center;
@@ -428,6 +444,9 @@ h3 .icon { width: 18px; height: 18px; vertical-align: -2px; margin-right: 2px; }
     margin-left: 0;
     justify-content: center;
   }
+  .lang-switch { order: 5; }
+  .nav-substack { margin: 0; font-size: 0.68rem; }
+  .nav-substack .icon { width: 10px; height: 10px; }
 
   /* hero: centered, comfortable */
   .hero { padding: 44px 0 32px; text-align: center; }
