@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Ajdin Salihović</title>
+  <meta name="description" content="Contact Ajdin Salihović — AI Data Engineer &amp; ML Engineer. Send a project inquiry or a question; replies come personally." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">AS</span>Ajdin Salihović</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html">home</a>
+      <a href="work.html">work</a>
+      <a href="freelance.html">freelance</a>
+      <a href="index.html#about">about</a>
+      <a href="contact.html" aria-current="page">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <p class="eyebrow">Contact</p>
+    <h1>Questions, ideas,<br /><span class="title-line">or a project brief?</span></h1>
+    <p class="hero-sub">
+      Whether it's a pipeline that needs building, documents that need structure, or an automation
+      that would save your team a week every month — send a message and I'll reply personally.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <form class="form" action="https://formsubmit.co/ajdin-salihovic@outlook.com" method="POST">
+        <!-- FormSubmit configuration -->
+        <input type="hidden" name="_subject" value="New inquiry from ajdinsalihovic.github.io" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://ajdinsalihovic.github.io/portfolio_ai/thanks.html" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <label for="name"><span class="field">name</span></label>
+        <input id="name" type="text" name="name" required autocomplete="name" placeholder="Your name" />
+
+        <label for="email"><span class="field">email</span></label>
+        <input id="email" type="email" name="email" required autocomplete="email" placeholder="you@company.com" />
+
+        <label for="message"><span class="field">message</span></label>
+        <textarea id="message" name="message" required placeholder="What are you building? What data is involved, and what should the result look like?"></textarea>
+
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <a class="btn btn-ghost" id="mailto-fallback" href="mailto:ajdin-salihovic@outlook.com" style="margin-left:10px;">Open in your email app</a>
+        <p class="form-note">Goes straight to my inbox — I reply personally, usually within a day.</p>
+      </form>
+
+      <div class="grid-3" style="margin-top:48px;">
+        <div class="card reveal">
+          <span class="field">email</span>
+          <h3><a href="mailto:ajdin-salihovic@outlook.com" style="text-decoration:none;">ajdin-salihovic@outlook.com</a></h3>
+          <p>Prefer email directly? This works too.</p>
+        </div>
+        <div class="card reveal">
+          <span class="field">professional</span>
+          <h3>GitHub &amp; LinkedIn</h3>
+          <p>
+            <a href="https://github.com/AjdinSalihovic" target="_blank" rel="noopener">github.com/AjdinSalihovic</a><br />
+            <a href="https://www.linkedin.com/in/ajdin-salihovic/" target="_blank" rel="noopener">linkedin.com/in/ajdin-salihovic</a>
+          </p>
+        </div>
+        <div class="card reveal">
+          <span class="field">social</span>
+          <h3>Instagram</h3>
+          <p><a href="https://www.instagram.com/ajdin_thinks_data/" target="_blank" rel="noopener">@ajdin_thinks_data</a> — thoughts on data and AI, in between the pipelines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>© <span id="year">2026</span> Ajdin Salihović · Tuzla, Bosnia &amp; Herzegovina</span>
+    <div class="footer-links">
+      <a href="mailto:ajdin-salihovic@outlook.com">email</a>
+      <a href="https://github.com/AjdinSalihovic" target="_blank" rel="noopener">github</a>
+      <a href="https://www.linkedin.com/in/ajdin-salihovic/" target="_blank" rel="noopener">linkedin</a>
+      <a href="https://www.instagram.com/ajdin_thinks_data/" target="_blank" rel="noopener">instagram</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+// "Open in your email app": prefill subject + body from whatever is typed
+(function () {
+  const link = document.getElementById("mailto-fallback");
+  if (!link) return;
+  link.addEventListener("click", function () {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const msg = document.getElementById("message").value.trim();
+    const subject = "Portfolio inquiry" + (name ? " from " + name : "");
+    const body = msg + (email ? "\n\nReply to: " + email : "");
+    link.href =
+      "mailto:ajdin-salihovic@outlook.com" +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>

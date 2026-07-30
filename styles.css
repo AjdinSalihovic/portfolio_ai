@@ -1,0 +1,356 @@
+/* ============================================================
+   Ajdin Salihović — portfolio
+   Palette: bone paper / pine ink / evergreen / amber signal
+   Type: Bricolage Grotesque (display) · Instrument Sans (body)
+         IBM Plex Mono (field labels & data)
+   ============================================================ */
+
+:root {
+  --paper: #ECEFE8;
+  --panel: #F5F7F1;
+  --ink: #101B15;
+  --muted: #57655C;
+  --pine: #175641;
+  --pine-soft: #DDE7DF;
+  --signal: #C77B22;
+  --line: #C9D0C2;
+  --radius: 10px;
+  --maxw: 1080px;
+  --font-display: "Bricolage Grotesque", "Arial Black", sans-serif;
+  --font-body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--pine); color: var(--paper); }
+
+a { color: var(--pine); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--ink); }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 800; }
+h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); font-weight: 700; }
+h3 { font-size: 1.2rem; font-weight: 700; }
+
+p { margin: 0 0 1em; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+/* ---------- field-label device (the record motif) ---------- */
+.field {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--pine);
+  text-transform: lowercase;
+}
+.field::after { content: ":"; opacity: 0.5; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--signal);
+  margin-bottom: 0.9rem;
+}
+
+/* ---------------------------- nav --------------------------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-mark {
+  width: 30px; height: 30px;
+  border-radius: 8px;
+  background: var(--pine);
+  color: var(--paper);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  text-decoration: none;
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+.nav-links a:hover { color: var(--ink); background: var(--pine-soft); }
+.nav-links a[aria-current="page"] {
+  color: var(--pine);
+  background: var(--pine-soft);
+}
+
+/* --------------------------- hero --------------------------- */
+.hero { padding: 72px 0 40px; }
+.hero .title-line { color: var(--pine); }
+.hero-sub { max-width: 620px; color: var(--muted); font-size: 1.08rem; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px; }
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, transform 0.15s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--pine); border-color: var(--pine); color: var(--paper); }
+.btn-primary:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.btn-ghost:hover { background: var(--pine-soft); color: var(--ink); }
+
+/* ------------------------ pipeline svg ---------------------- */
+.pipeline {
+  margin: 48px 0 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 18px 10px 8px;
+  overflow-x: auto;
+}
+.pipeline svg { display: block; min-width: 640px; width: 100%; height: auto; }
+.pipe-node { fill: var(--paper); stroke: var(--ink); stroke-width: 1.5; }
+.pipe-node-accent { fill: var(--pine); stroke: var(--pine); }
+.pipe-label { font-family: var(--font-mono); font-size: 11px; fill: var(--ink); }
+.pipe-label-light { fill: var(--paper); }
+.pipe-sub { font-family: var(--font-mono); font-size: 9px; fill: var(--muted); }
+.pipe-path { stroke: var(--line); stroke-width: 1.5; fill: none; }
+.pipe-dot { fill: var(--signal); }
+
+@media (prefers-reduced-motion: reduce) {
+  .pipe-dot { display: none; }
+  html { scroll-behavior: auto; }
+  .reveal { transition: none !important; transform: none !important; opacity: 1 !important; }
+}
+
+/* ------------------------- sections ------------------------- */
+.section { padding: 56px 0; }
+.section + .section { border-top: 1px solid var(--line); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+@media (max-width: 860px) { .grid-3 { grid-template-columns: 1fr; } .grid-2 { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.card h3 { margin-top: 0.4rem; }
+.card p { color: var(--muted); font-size: 0.97rem; }
+a.card { text-decoration: none; color: inherit; display: block; transition: border-color 0.15s, transform 0.15s; }
+a.card:hover { border-color: var(--pine); transform: translateY(-2px); }
+.card .go { font-family: var(--font-mono); font-size: 0.82rem; color: var(--pine); }
+
+/* stats */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 40px; }
+@media (max-width: 860px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+.stat {
+  border-left: 2px solid var(--pine);
+  padding: 4px 0 4px 16px;
+}
+.stat b { font-family: var(--font-display); font-size: 1.7rem; display: block; }
+.stat span { font-family: var(--font-mono); font-size: 0.76rem; color: var(--muted); }
+
+/* ----------------------- record blocks ---------------------- */
+.record {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 26px 26px 20px;
+  margin-bottom: 18px;
+}
+.record-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.record-head h3 { margin: 0; }
+.record-org { font-family: var(--font-mono); font-size: 0.85rem; color: var(--signal); }
+.record-meta {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin: 10px 0 14px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.record ul { margin: 0; padding-left: 20px; color: var(--muted); font-size: 0.96rem; }
+.record ul li { margin-bottom: 6px; }
+.record .stack-line { margin-top: 14px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--pine); }
+
+.badge-current {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--pine);
+  color: var(--paper);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+/* skill groups */
+.skills dt {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--pine);
+  margin-top: 16px;
+}
+.skills dd { margin: 4px 0 0; color: var(--muted); font-size: 0.95rem; }
+
+/* tag chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 12px 0 0; list-style: none; }
+.chips li {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 999px;
+  padding: 5px 12px;
+  color: var(--ink);
+}
+
+/* process steps */
+.steps { counter-reset: step; padding: 0; margin: 0; list-style: none; }
+.steps li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.steps li:last-child { border-bottom: none; }
+.steps li::before {
+  content: "0" counter(step);
+  font-family: var(--font-mono);
+  color: var(--signal);
+  font-size: 0.95rem;
+  padding-top: 3px;
+}
+.steps b { font-family: var(--font-display); font-weight: 700; display: block; margin-bottom: 2px; }
+.steps p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+/* ------------------------- contact form ---------------------- */
+.form { max-width: 620px; }
+.form label {
+  display: block;
+  margin: 18px 0 6px;
+}
+.form input, .form textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--ink);
+}
+.form input:focus, .form textarea:focus { border-color: var(--pine); }
+.form textarea { min-height: 150px; resize: vertical; }
+.form button { margin-top: 22px; }
+.form-note { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); margin-top: 14px; }
+
+/* ------------------------- footer ---------------------------- */
+.footer {
+  border-top: 1px solid var(--line);
+  background: var(--panel);
+  margin-top: 40px;
+}
+.footer-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 34px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.footer-links { margin-left: auto; display: flex; gap: 18px; flex-wrap: wrap; }
+.footer-links a { color: var(--muted); text-decoration: none; }
+.footer-links a:hover { color: var(--pine); }
+
+/* ---------------------- scroll reveal ------------------------ */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ---------------------- small screens ------------------------ */
+@media (max-width: 640px) {
+  .hero { padding-top: 48px; }
+  .record { padding: 20px 18px 16px; }
+}

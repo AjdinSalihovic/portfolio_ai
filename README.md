@@ -1,56 +1,26 @@
 # Ajdin Salihović — Portfolio
 
-A production-ready personal portfolio with a separated frontend (HTML / CSS / JS) and a FastAPI backend that emails you contact-form submissions.
+Multi-page static site. No build step — plain HTML/CSS/JS. Works on GitHub Pages as-is.
 
-## Structure
+## Pages
+- index.html — home (hero, animated pipeline, highlights, about me section)
+- work.html — full experience + skills
+- freelance.html — services + process
+- contact.html — inquiry form (FormSubmit → ajdin-salihovic@outlook.com)
+- thanks.html — post-submit confirmation
 
-```
-portfolio/
-├── frontend/
-│   ├── index.html        # page structure & content
-│   ├── css/styles.css    # "Pipeline & Stone" design system
-│   └── js/main.js        # pipeline animation, reveals, contact form
-├── backend/
-│   ├── main.py           # FastAPI: /api/contact endpoint + serves frontend
-│   ├── requirements.txt
-│   └── .env.example      # copy to .env and fill in SMTP settings
-└── README.md
-```
+## Deploy to GitHub Pages
+1. Replace the contents of your `portfolio_ai` repo with these files (keep them at the repo root).
+2. Commit & push. Site updates at https://ajdinsalihovic.github.io/portfolio_ai/
 
-## Run locally
+## Contact form — one-time activation
+The form uses FormSubmit (free, no backend). The FIRST time someone submits,
+FormSubmit emails ajdin-salihovic@outlook.com a confirmation link — click it once
+and every future submission lands in your inbox.
 
-```bash
-cd backend
-pip install -r requirements.txt
-cp .env.example .env        # fill in SMTP_USER, SMTP_PASSWORD, CONTACT_TO
-uvicorn main:app --reload --port 8000
-```
+If you ever deploy to a different domain, update the `_next` hidden input in
+contact.html to point at your new thanks.html URL.
 
-Open http://localhost:8000 — the backend serves the frontend and handles the contact form at `/api/contact`.
-
-To preview the frontend alone (no email sending), just open `frontend/index.html` in a browser. The form will fall back to a pre-filled mailto link if the backend isn't reachable.
-
-## Before you publish — 3 edits
-
-1. **Your email** — in `frontend/index.html`, replace `you@example.com` (appears twice: the `mailto:` href and the visible text).
-2. **SMTP credentials** — in `backend/.env` (Gmail: use an App Password, not your real password).
-3. **Optional** — tweak copy, add project links, swap the LinkedIn URL if needed.
-
-## Deploy (Render — same platform as LP Atlas)
-
-1. Push this folder to a GitHub repo.
-2. New → Web Service, root directory: `backend`
-   - Build command: `pip install -r requirements.txt`
-   - Start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-3. Add environment variables: `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `CONTACT_TO`.
-4. Done — one service serves both frontend and API.
-
-If you'd rather host the frontend separately (Netlify/Vercel/GitHub Pages), deploy only `backend/` to Render and set `API_BASE` at the top of `frontend/js/main.js` to your backend URL, plus `ALLOWED_ORIGINS` in the backend env to your frontend domain.
-
-## Features
-
-- Animated SVG data pipeline in the hero (your actual workflow: sources → ingestion → enrichment → delivery)
-- Scroll-triggered reveals and animated stat counters (both respect `prefers-reduced-motion`)
-- Fully responsive down to mobile, with keyboard-visible focus states
-- Contact form with client-side validation, server-side rate limiting (5/hour per IP), and a mailto fallback if the backend is down
-- `Reply-To` set to the visitor's address — hit Reply in your inbox and it goes straight to them
+## Customizing
+- Colors & fonts: top of styles.css (`:root` tokens)
+- Nav/footer are duplicated per page — edit in each file if you change links.
