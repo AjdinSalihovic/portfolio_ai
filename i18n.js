@@ -43,6 +43,8 @@
     "view services →": "pogledaj usluge →",
     "A pipeline to build, documents to structure, or just a question — one message away, answered personally.": "Pipeline koji treba izgraditi, dokumenti kojima treba struktura ili samo pitanje — na jednu poruku, s ličnim odgovorom.",
     "say hello →": "javi se →",
+    "@dataminerinsights — 60K investors circling. Buy them or subscribe for the Friday drop.": "<b>@dataminerinsights</b> — 60K investitora kruži. Kupite ih ili se pretplatite za Friday drop.",
+    "read on substack →": "čitaj na substacku →",
     "About me": "O meni",
 
     // ---- index: current focus ----
@@ -213,6 +215,8 @@
     "view services →": "leistungen ansehen →",
     "A pipeline to build, documents to structure, or just a question — one message away, answered personally.": "Eine Pipeline, die gebaut werden muss, Dokumente, die Struktur brauchen, oder einfach eine Frage — eine Nachricht entfernt, persönlich beantwortet.",
     "say hello →": "sag hallo →",
+    "@dataminerinsights — 60K investors circling. Buy them or subscribe for the Friday drop.": "<b>@dataminerinsights</b> — 60K Investoren im Umlauf. Kaufen oder den Friday Drop abonnieren.",
+    "read on substack →": "auf substack lesen →",
     "About me": "Über mich",
 
     // ---- index: current focus ----
