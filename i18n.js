@@ -11,7 +11,6 @@
     "home": "početna",
     "work": "iskustvo",
     "freelance": "freelance",
-    "about": "o meni",
     "contact": "kontakt",
 
     // ---- shared ----
@@ -42,9 +41,9 @@
     "view experience →": "pogledaj iskustvo →",
     "What I build for clients: document automation, data pipelines, scraping & enrichment, dashboards — scoped, shipped, documented.": "Šta gradim za klijente: automatizacija dokumenata, data pipeline-i, scraping i obogaćivanje, dashboardi — definisano, isporučeno, dokumentovano.",
     "view services →": "pogledaj usluge →",
+    "A pipeline to build, documents to structure, or just a question — one message away, answered personally.": "Pipeline koji treba izgraditi, dokumenti kojima treba struktura ili samo pitanje — na jednu poruku, s ličnim odgovorom.",
+    "say hello →": "javi se →",
     "About me": "O meni",
-    "The person behind the pipelines — education, certifications, languages, and why my Instagram handle is @ajdin_thinks_data.": "Osoba iza pipeline-a — obrazovanje, certifikati, jezici, i zašto je moj Instagram nadimak @ajdin_thinks_data.",
-    "meet me ↓": "upoznaj me ↓",
 
     // ---- index: current focus ----
     "Right now": "Trenutno",
@@ -182,7 +181,6 @@
     "home": "start",
     "work": "erfahrung",
     "freelance": "freelance",
-    "about": "über mich",
     "contact": "kontakt",
 
     // ---- shared ----
@@ -213,9 +211,9 @@
     "view experience →": "erfahrung ansehen →",
     "What I build for clients: document automation, data pipelines, scraping & enrichment, dashboards — scoped, shipped, documented.": "Was ich für Kunden baue: Dokumentenautomatisierung, Datenpipelines, Scraping & Anreicherung, Dashboards — sauber definiert, geliefert, dokumentiert.",
     "view services →": "leistungen ansehen →",
+    "A pipeline to build, documents to structure, or just a question — one message away, answered personally.": "Eine Pipeline, die gebaut werden muss, Dokumente, die Struktur brauchen, oder einfach eine Frage — eine Nachricht entfernt, persönlich beantwortet.",
+    "say hello →": "sag hallo →",
     "About me": "Über mich",
-    "The person behind the pipelines — education, certifications, languages, and why my Instagram handle is @ajdin_thinks_data.": "Der Mensch hinter den Pipelines — Ausbildung, Zertifikate, Sprachen, und warum mein Instagram-Handle @ajdin_thinks_data ist.",
-    "meet me ↓": "mehr über mich ↓",
 
     // ---- index: current focus ----
     "Right now": "Aktuell",
