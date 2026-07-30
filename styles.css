@@ -350,7 +350,79 @@ a.card:hover { border-color: var(--pine); transform: translateY(-2px); }
 .reveal.in { opacity: 1; transform: none; }
 
 /* ---------------------- small screens ------------------------ */
-@media (max-width: 640px) {
-  .hero { padding-top: 48px; }
+@media (max-width: 700px) {
+  html, body { overflow-x: hidden; }
+  body { font-size: 16px; }
+  .wrap { padding: 0 20px; }
+
+  /* nav: brand on top, links centered underneath */
+  .nav-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+  .nav-links {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  /* hero: centered, comfortable */
+  .hero { padding: 44px 0 32px; text-align: center; }
+  .hero-sub { margin-left: auto; margin-right: auto; }
+  .hero-actions { justify-content: center; }
+
+  /* buttons: full-width, easy thumb targets */
+  .hero-actions .btn {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 14px 22px;
+  }
+
+  /* section headers centered, content left for readability */
+  .section { padding: 44px 0; }
+  .section .eyebrow,
+  .section h2 { text-align: center; }
+
+  /* stats: single centered column with clear separation */
+  .stats { grid-template-columns: 1fr; gap: 0; margin-top: 32px; text-align: left; }
+  .stat {
+    border-left: none;
+    border-bottom: 1px solid var(--line);
+    padding: 14px 4px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .stat:last-child { border-bottom: none; }
+  .stat b { font-size: 1.5rem; }
+
+  /* records & cards: tighter padding, never edge-to-edge text */
   .record { padding: 20px 18px 16px; }
+  .card { padding: 20px 18px; }
+  .record-meta { gap: 10px 18px; }
+
+  /* pipeline: hint that it scrolls */
+  .pipeline { padding: 14px 8px 6px; }
+
+  /* process steps: tighter number column */
+  .steps li { grid-template-columns: 40px 1fr; gap: 12px; }
+
+  /* all action buttons: full-width, centered, stacked */
+  main .btn { display: block; width: 100%; text-align: center; margin: 10px 0 0 !important; box-sizing: border-box; }
+  .hero-actions { display: block; }
+
+  /* footer: centered stack */
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+  .footer-links { margin-left: 0; justify-content: center; }
+}
+
+@media (max-width: 400px) {
+  h1 { font-size: 2.1rem; }
+  .nav-links a { padding: 6px 8px; font-size: 0.78rem; }
 }
