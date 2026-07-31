@@ -427,6 +427,11 @@ h3 .icon { width: 18px; height: 18px; vertical-align: -2px; margin-right: 2px; }
 .promo-text { flex: 1 1 320px; font-size: 0.95rem; }
 .promo .go { margin-left: auto; white-space: nowrap; }
 
+/* ---------------------- tablet ------------------------------- */
+@media (max-width: 1024px) {
+  .hero { padding-left: 15px; padding-right: 15px; }
+}
+
 /* ---------------------- small screens ------------------------ */
 @media (max-width: 700px) {
   html, body { overflow-x: hidden; }
@@ -449,7 +454,7 @@ h3 .icon { width: 18px; height: 18px; vertical-align: -2px; margin-right: 2px; }
   .nav-substack .icon { width: 10px; height: 10px; }
 
   /* hero: centered, comfortable */
-  .hero { padding: 44px 0 32px; text-align: center; }
+  .hero { padding: 44px 15px 32px; text-align: center; }
   .hero-sub { margin-left: auto; margin-right: auto; }
   .hero-actions { justify-content: center; }
 
@@ -486,7 +491,8 @@ h3 .icon { width: 18px; height: 18px; vertical-align: -2px; margin-right: 2px; }
   .pipeline { display: none; }
 
   /* promo strip: stacked and centered */
-  .promo { flex-direction: column; text-align: center; padding: 18px 16px; }
+  .promo { flex-direction: column; text-align: center; padding: 18px 16px; gap: 10px; }
+  .promo-text { flex: 1 1 54px; }
   .promo .go { margin-left: 0; }
 
   /* social icon row: centered under the button */
