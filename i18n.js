@@ -35,6 +35,10 @@
 
     // ---- index: teasers ----
     "Explore": "Istraži",
+    "Two ways in.": "Dva ulaza.",
+    "What I build for clients — document automation, data pipelines, scraping & enrichment, dashboards — and the eight-year record behind it.": "Šta gradim za klijente — automatizacija dokumenata, data pipeline-i, scraping i obogaćivanje, dashboardi — i osmogodišnji zapis iza toga.",
+    "view services & experience →": "pogledaj usluge i iskustvo →",
+    "See my experience ↓": "Pogledaj iskustvo ↓",
     "Three ways in.": "Tri ulaza.",
     "Work": "Iskustvo",
     "Eight years of roles and systems — from LLM document processing at Hypatos to warehouses on BigQuery, Snowflake and Databricks.": "Osam godina uloga i sistema — od LLM obrade dokumenata u Hypatosu do skladišta na BigQuery, Snowflake i Databricks platformama.",
@@ -207,6 +211,10 @@
 
     // ---- index: teasers ----
     "Explore": "Entdecken",
+    "Two ways in.": "Zwei Wege hinein.",
+    "What I build for clients — document automation, data pipelines, scraping & enrichment, dashboards — and the eight-year record behind it.": "Was ich für Kunden baue — Dokumentenautomatisierung, Datenpipelines, Scraping und Anreicherung, Dashboards — und der achtjährige Werdegang dahinter.",
+    "view services & experience →": "leistungen & erfahrung ansehen →",
+    "See my experience ↓": "Erfahrung ansehen ↓",
     "Three ways in.": "Drei Wege hinein.",
     "Work": "Erfahrung",
     "Eight years of roles and systems — from LLM document processing at Hypatos to warehouses on BigQuery, Snowflake and Databricks.": "Acht Jahre Rollen und Systeme — von LLM-Dokumentenverarbeitung bei Hypatos bis zu Warehouses auf BigQuery, Snowflake und Databricks.",

@@ -5,8 +5,11 @@ Vercel, GitHub Pages, Netlify or Cloudflare Pages.
 
 ## Pages
 - index.html — home (hero, animated pipeline, highlights, about me section)
-- work.html — full experience + skills
-- freelance.html — services + process
+- work.html — freelance offer + process, then experience + skills (one page).
+  The experience half has `id="experience"`, so `/work#experience` deep-links
+  straight to it.
+- freelance.html — retired. Kept only as a redirect to /work so old links and
+  bookmarks don't 404. Safe to delete once nothing points at it.
 - contact.html — inquiry form (FormSubmit → ajdin-salihovic@outlook.com)
 - thanks.html — post-submit confirmation
 - serve.py — local preview server (matches live URL behaviour)

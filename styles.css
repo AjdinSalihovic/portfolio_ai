@@ -259,6 +259,17 @@ p { margin: 0 0 1em; }
 .section { padding: 56px 0; }
 .section + .section { border-top: 1px solid var(--line); }
 
+/* intro paragraph under a section heading */
+.section-lead {
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+}
+
+/* jump targets must clear the sticky nav */
+[id] { scroll-margin-top: 84px; }
+
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 @media (max-width: 860px) { .grid-3 { grid-template-columns: 1fr; } .grid-2 { grid-template-columns: 1fr; } }
@@ -504,6 +515,10 @@ h3 .icon { width: 18px; height: 18px; vertical-align: -2px; margin-right: 2px; }
     text-align: center;
     padding: 14px 22px;
   }
+
+  /* mobile nav stacks, so jump targets need more clearance */
+  [id] { scroll-margin-top: 150px; }
+  .section-lead { font-size: 1rem; }
 
   /* section headers centered, content left for readability */
   .section { padding: 44px 0; }
