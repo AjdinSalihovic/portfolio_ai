@@ -1,6 +1,7 @@
 # Ajdin Salihović — Portfolio
 
-Multi-page static site. No build step — plain HTML/CSS/JS. Works on GitHub Pages as-is.
+Multi-page static site. No build step — plain HTML/CSS/JS. Deploys as-is to
+Vercel, GitHub Pages, Netlify or Cloudflare Pages.
 
 ## Pages
 - index.html — home (hero, animated pipeline, highlights, about me section)
@@ -8,21 +9,33 @@ Multi-page static site. No build step — plain HTML/CSS/JS. Works on GitHub Pag
 - freelance.html — services + process
 - contact.html — inquiry form (FormSubmit → ajdin-salihovic@outlook.com)
 - thanks.html — post-submit confirmation
-- serve.py — local preview server (matches GitHub Pages URL behaviour)
+- serve.py — local preview server (matches live URL behaviour)
+- vercel.json — enables clean URLs on Vercel
 
-## Deploy to GitHub Pages
-1. Copy these files into your `portfolio_ai` repo, at the repo root.
-   Copy them *over* the existing files rather than replacing the folder,
-   so you keep your git history.
-2. Commit & push. Site updates at https://ajdinsalihovic.github.io/portfolio_ai/
+## Deploy
+Copy these files into your repo root — copy them *over* the existing files
+rather than replacing the folder, so you keep your git history. Commit and
+push; your host rebuilds automatically.
+
+Keep `vercel.json` at the repo root if you deploy on Vercel. It's harmless
+on other hosts, so the same files work everywhere.
 
 ## Clean URLs
 Pages are linked without the `.html` extension — `/work`, `/freelance`,
 `/contact` — and the home link is just `./`. The files themselves are still
-named `work.html` etc; GitHub Pages resolves the extensionless path to the
-`.html` file automatically, so no config, redirects or Jekyll is needed.
+named `work.html` etc; the host maps the extensionless path to the file.
 
-Trade-off: this only works over HTTP. If you open `index.html` by
+**This needs host support, and hosts differ:**
+
+| Host | What's needed |
+|---|---|
+| Vercel | `vercel.json` with `"cleanUrls": true` — included in this repo |
+| GitHub Pages | nothing, it does this automatically |
+| Netlify / Cloudflare Pages | nothing, on by default |
+
+Deleting `vercel.json` will break every link on Vercel with a 404.
+
+Trade-off: clean URLs only work over HTTP. If you open `index.html` by
 double-clicking it, the nav links will 404, because there's no server to do
 the resolving. Use the included preview server instead:
 
@@ -31,17 +44,15 @@ the resolving. Use the included preview server instead:
 (Plain `python3 -m http.server` won't work — it doesn't resolve
 extensionless URLs.)
 
-If you ever move off GitHub Pages, check the new host does the same thing.
-Netlify and Cloudflare Pages do; some others don't, in which case put each
-page in its own folder as `work/index.html` and link to `/work/`.
-
 ## Contact form — one-time activation
 The form uses FormSubmit (free, no backend). The FIRST time someone submits,
 FormSubmit emails ajdin-salihovic@outlook.com a confirmation link — click it once
 and every future submission lands in your inbox.
 
-If you ever deploy to a different domain, update the `_next` hidden input in
-contact.html to point at your new /thanks URL.
+**The `_next` hidden input in contact.html must be the full URL of your own
+live site's /thanks page.** It currently points at the GitHub Pages domain —
+if you're serving from Vercel or a custom domain, change it, or people who
+submit the form land on the wrong site.
 
 ## Brand assets
 The AY monogram is **embedded directly in the code** as base64 data URIs, so
