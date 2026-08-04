@@ -244,10 +244,22 @@ p { margin: 0 0 1em; }
 .pipe-node { fill: var(--panel); stroke: var(--brand); stroke-width: 1.5; }
 .pipe-node-accent { fill: var(--brand); stroke: var(--brand); }
 .pipe-label { font-family: var(--font-mono); font-size: 11px; fill: var(--ink); }
-.pipe-label-light { fill: #EDEFF3; }
+.pipe-label-light { fill: #FFFFFF; }
 .pipe-sub { font-family: var(--font-mono); font-size: 9px; fill: var(--muted); }
+/* compound selector: .pipe-sub is declared after .pipe-label-light and would
+   otherwise win on equal specificity, dropping this text to 2:1 on the navy nodes */
+.pipe-sub.pipe-label-light { fill: #E3EAF5; }
 .pipe-path { stroke: var(--brand); stroke-opacity: 0.28; stroke-width: 1.5; fill: none; }
 .pipe-dot { fill: var(--signal-bright); }
+
+.pipe-caption {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  text-align: center;
+  padding: 6px 4px 10px;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .pipe-dot { display: none; }

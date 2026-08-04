@@ -25,6 +25,9 @@
     "Unstructured in.Trusted data out.": "Nestrukturirano unutra.<br /><span class=\"title-line\">Pouzdani podaci van.</span>",
     "Eight years across software, data and AI. I build LLM-powered document processing, production data pipelines, and the validation layers that make both trustworthy — currently engineering the context layer behind AI document extraction at Hypatos.": "Osam godina u softveru, podacima i AI. Gradim LLM obradu dokumenata, produkcijske data pipeline-e i validacijske slojeve koji ih čine pouzdanima — trenutno radim na kontekstnom sloju iza AI ekstrakcije dokumenata u Hypatosu.",
     "Start a project": "Pokreni projekat",
+    "Hi, I'm Ajdin.I think in data.": "Zdravo, ja sam Ajdin.<br /><span class=\"title-line\">Razmišljam u podacima.</span>",
+    "Unstructured in. Trusted data out.": "Nestrukturirano unutra. Pouzdani podaci van.",
+    "How I got here.": "Kako sam došao ovdje.",
     "See my work": "Pogledaj radove",
     "8 yrs": "8 god",
     "4 yrs": "4 god",
@@ -201,6 +204,9 @@
     "Unstructured in.Trusted data out.": "Unstrukturiert rein.<br /><span class=\"title-line\">Verlässliche Daten raus.</span>",
     "Eight years across software, data and AI. I build LLM-powered document processing, production data pipelines, and the validation layers that make both trustworthy — currently engineering the context layer behind AI document extraction at Hypatos.": "Acht Jahre in Software, Daten und KI. Ich baue LLM-gestützte Dokumentenverarbeitung, produktive Datenpipelines und die Validierungsschichten, die beides verlässlich machen — derzeit arbeite ich an der Kontextschicht hinter der KI-Dokumentenextraktion bei Hypatos.",
     "Start a project": "Projekt starten",
+    "Hi, I'm Ajdin.I think in data.": "Hi, ich bin Ajdin.<br /><span class=\"title-line\">Ich denke in Daten.</span>",
+    "Unstructured in. Trusted data out.": "Unstrukturiert rein. Verlässliche Daten raus.",
+    "How I got here.": "Wie ich hierher kam.",
     "See my work": "Meine Arbeit ansehen",
     "8 yrs": "8 J.",
     "4 yrs": "4 J.",
@@ -365,7 +371,7 @@
 
   var DICTS = { ba: BA, de: DE };
   var LANG_CODES = { en: "en", ba: "bs", de: "de" };
-  var SELECTOR = "title, p, h1, h2, h3, li, dt, dd, b, button, a, span";
+  var SELECTOR = "title, p, h1, h2, h3, li, dt, dd, b, button, a, span, figcaption";
   var SKIP_CLASSES = ["stack-line", "chips", "record-org", "brand", "footer-links", "lang-switch"];
 
   function norm(s) { return s.replace(/\s+/g, " ").trim(); }
