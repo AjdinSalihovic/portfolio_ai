@@ -8,10 +8,32 @@ Multi-page static site. No build step — plain HTML/CSS/JS. Works on GitHub Pag
 - freelance.html — services + process
 - contact.html — inquiry form (FormSubmit → ajdin-salihovic@outlook.com)
 - thanks.html — post-submit confirmation
+- serve.py — local preview server (matches GitHub Pages URL behaviour)
 
 ## Deploy to GitHub Pages
-1. Replace the contents of your `portfolio_ai` repo with these files (keep them at the repo root).
+1. Copy these files into your `portfolio_ai` repo, at the repo root.
+   Copy them *over* the existing files rather than replacing the folder,
+   so you keep your git history.
 2. Commit & push. Site updates at https://ajdinsalihovic.github.io/portfolio_ai/
+
+## Clean URLs
+Pages are linked without the `.html` extension — `/work`, `/freelance`,
+`/contact` — and the home link is just `./`. The files themselves are still
+named `work.html` etc; GitHub Pages resolves the extensionless path to the
+`.html` file automatically, so no config, redirects or Jekyll is needed.
+
+Trade-off: this only works over HTTP. If you open `index.html` by
+double-clicking it, the nav links will 404, because there's no server to do
+the resolving. Use the included preview server instead:
+
+    python3 serve.py     # then open http://localhost:8000
+
+(Plain `python3 -m http.server` won't work — it doesn't resolve
+extensionless URLs.)
+
+If you ever move off GitHub Pages, check the new host does the same thing.
+Netlify and Cloudflare Pages do; some others don't, in which case put each
+page in its own folder as `work/index.html` and link to `/work/`.
 
 ## Contact form — one-time activation
 The form uses FormSubmit (free, no backend). The FIRST time someone submits,
@@ -19,7 +41,7 @@ FormSubmit emails ajdin-salihovic@outlook.com a confirmation link — click it o
 and every future submission lands in your inbox.
 
 If you ever deploy to a different domain, update the `_next` hidden input in
-contact.html to point at your new thanks.html URL.
+contact.html to point at your new /thanks URL.
 
 ## Brand assets
 The AY monogram is **embedded directly in the code** as base64 data URIs, so
