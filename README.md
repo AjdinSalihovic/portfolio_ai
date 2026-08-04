@@ -22,12 +22,19 @@ If you ever deploy to a different domain, update the `_next` hidden input in
 contact.html to point at your new thanks.html URL.
 
 ## Brand assets
-Everything lives in `assets/`, generated from the transparent AY monogram:
-- `logo-ay.png` — navy mark, used in the nav
-- `logo-ay-light.png` — paper-coloured mark, used on the dark footer
-- `favicon-32.png` / `favicon-180.png` — browser tab + iOS home screen
+The AY monogram is **embedded directly in the code** as base64 data URIs, so
+there are no image files to lose when deploying:
+- nav mark (navy) and footer mark (light) — both in `styles.css`, under
+  `.brand-mark` and `.footer-mark`
+- browser tab icon — in the `<link rel="icon">` of each HTML file
 
-To swap the logo later, replace these four files and keep the same names.
+The `assets/` folder holds the full-resolution originals for your own use
+(social profiles, business cards, etc). Only `favicon-180.png` (the iOS
+home-screen icon) is still loaded from it; everything else works without it.
+
+To swap the logo later, regenerate the data URIs — resize the new mark to
+about 120px wide, save as PNG, base64-encode it, and replace the string
+inside the `url("data:image/png;base64,...")` in `styles.css`.
 
 ## Palette
 Rebuilt around the navy of the AY monogram (`#092140`) — the mark now sets
