@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- White background -->
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+  
+  <!-- AY Logo - larger version -->
+  <g transform="translate(600, 240)">
+    <!-- Logo background circle -->
+    <circle cx="0" cy="0" r="80" fill="#092140"/>
+    
+    <!-- A letter -->
+    <path d="M-30 30 L-10 -30 L10 -30 L30 30 M-20 10 L20 10" 
+          stroke="#FFFFFF" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+    
+    <!-- Y letter -->
+    <path d="M-30 -30 L0 0 L30 -30 M0 0 L0 30" 
+          stroke="#FFFFFF" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Name text -->
+  <text x="600" y="380" 
+        font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" 
+        font-size="48" 
+        font-weight="700" 
+        fill="#092140" 
+        text-anchor="middle"
+        letter-spacing="-0.5">Ajdin Salihović</text>
+  
+  <!-- Subtitle text -->
+  <text x="600" y="430" 
+        font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" 
+        font-size="28" 
+        font-weight="400" 
+        fill="#52627A" 
+        text-anchor="middle"
+        letter-spacing="2">Portfolio</text>
+  
+  <!-- Subtle decorative line -->
+  <line x1="540" y1="450" x2="660" y2="450" 
+        stroke="#8F5D18" 
+        stroke-width="2" 
+        stroke-linecap="round"/>
+  
+  <!-- Bottom tagline -->
+  <text x="600" y="500" 
+        font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" 
+        font-size="18" 
+        font-weight="400" 
+        fill="#8F5D18" 
+        text-anchor="middle"
+        letter-spacing="3"
+        text-transform="uppercase">AI Data Engineer · Machine Learning Engineer</text>
+</svg>
