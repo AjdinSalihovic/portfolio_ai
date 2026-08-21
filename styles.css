@@ -660,6 +660,7 @@ h3 .icon { width: 18px; height: 18px; vertical-align: -2px; margin-right: 2px; }
     gap: 18px;
   }
   .project-card { flex: none; }
+  .scroll-hint { display: none; }
 }
 
 /* ---------------------- tablet ------------------------------- */
