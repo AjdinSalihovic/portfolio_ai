@@ -569,6 +569,99 @@ h3 .icon { width: 18px; height: 18px; vertical-align: -2px; margin-right: 2px; }
   .exp-card { flex: none; }
 }
 
+/* ---------------------- projects carousel ------------------- */
+.projects-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 12px;
+  margin-left: -24px;
+  margin-right: -24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.projects-track::-webkit-scrollbar { height: 4px; }
+.projects-track::-webkit-scrollbar-track { background: var(--line); border-radius: 2px; }
+.projects-track::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 2px; }
+.projects-track::-webkit-scrollbar-thumb:hover { background: var(--ink); }
+
+.project-card {
+  flex: 0 0 380px;
+  scroll-snap-align: start;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.project-card:hover { border-color: var(--brand); transform: translateY(-2px); }
+
+.project-screenshot {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--line);
+}
+.project-screenshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 33, 64, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.project-card:hover .project-overlay { opacity: 1; }
+.project-live {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--brand);
+  padding: 8px 18px;
+  border-radius: 6px;
+}
+
+.project-info {
+  padding: 20px 22px 22px;
+}
+.project-info h3 {
+  font-size: 1.1rem;
+  margin: 0 0 4px;
+}
+.project-type {
+  font-size: 0.82rem;
+  color: var(--signal);
+  margin-bottom: 8px;
+}
+.project-info p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-bottom: 12px;
+}
+.project-info .chips { margin-top: 10px; }
+
+@media (max-width: 700px) {
+  .projects-track {
+    flex-direction: column;
+    overflow-x: visible;
+    gap: 18px;
+  }
+  .project-card { flex: none; }
+}
+
 /* ---------------------- tablet ------------------------------- */
 @media (max-width: 1024px) {
   .hero-inner { gap: 32px; }

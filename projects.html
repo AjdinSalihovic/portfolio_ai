@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Work &amp; Freelance — Ajdin Salihović</title>
-  <meta name="description" content="Freelance AI &amp; data engineering — LLM document automation, data pipelines, web data acquisition and dashboards — plus eight years of engineering roles behind it." />
+  <title>Projects — Ajdin Salihović</title>
+  <meta name="description" content="Portfolio projects by Ajdin Salihović — website development and data engineering projects." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -20,8 +20,8 @@
     <a class="brand" href="./"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Ajdin Salihović</span></a>
     <nav class="nav-links" aria-label="Main">
       <a href="./">home</a>
-      <a href="work" aria-current="page">work</a>
-      <a href="projects">projects</a>
+      <a href="work">work</a>
+      <a href="projects" aria-current="page">projects</a>
       <a href="contact">contact</a>
     </nav>
     <a class="nav-substack" href="https://substack.com/@dataminerinsights" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.539 24V10.812H1.46zM22.539 0H1.46v2.836h21.08V0z"/></svg><span>@dataminerinsights</span></a>
@@ -45,116 +45,63 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">Freelance</p>
-      <h1>Have a data problem?<br /><span class="title-line">I build the fix.</span></h1>
+      <p class="eyebrow">Projects</p>
+      <h1>Things I've<br /><span class="title-line">built &amp; shipped.</span></h1>
       <p class="hero-sub">
-        Backend, data and AI — scoping, building, deploying, and handing over
-        documentation your team can actually maintain.
+        Website development and data engineering projects — from complete builds to data pipelines and visualizations.
       </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="contact">Tell me what you're building</a>
-        <a class="btn btn-ghost" href="#experience">See my experience ↓</a>
-      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <h2>Services</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3>LLM document automation</h3>
-          <p>Invoices, contracts, forms — extracted into structured data with LLM pipelines and evaluation sets.</p>
-          <ul class="chips"><li>llm apis</li><li>extraction schemas</li><li>rag</li><li>evaluation</li></ul>
-        </div>
-        <div class="card">
-          <h3>Data pipelines &amp; warehousing</h3>
-          <p>ETL/ELT, modelling and orchestration on BigQuery, Snowflake, Redshift or Databricks.</p>
-          <ul class="chips"><li>python</li><li>airflow</li><li>dbt</li><li>sql</li><li>gcp / aws</li></ul>
-        </div>
-        <div class="card">
-          <h3>Web data acquisition</h3>
-          <p>Scraping, API integration, enrichment and QA — structured records delivered to your tools.</p>
-          <ul class="chips"><li>scraping</li><li>third-party apis</li><li>llm agents</li><li>qa rules</li></ul>
-        </div>
-        <div class="card">
-          <h3>Dashboards &amp; reporting</h3>
-          <p>Looker Studio dashboards and scheduled reporting on clean, validated data.</p>
-          <ul class="chips"><li>looker studio</li><li>reporting</li><li>scheduling</li><li>integrations</li></ul>
-        </div>
-      </div>
+      <h2>Website Development</h2>
+      <p class="section-lead">Complete website builds, redesigns, and e-commerce setups.</p>
+      <div class="projects-track">
+        <a href="https://instituten.shop/" target="_blank" rel="noopener" class="project-card">
+          <div class="project-screenshot">
+            <img src="assets/insituen.png" alt="Instituten.shop screenshot" loading="lazy" />
+            <div class="project-overlay">
+              <span class="project-live">Live site →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Instituten.shop</h3>
+            <p class="project-type">Website Redesign</p>
+            <p>Full redesign of an existing shop with improved UX and modern styling.</p>
+            <ul class="chips"><li>shopify</li><li>web design</li><li>ux</li></ul>
+          </div>
+        </a>
 
-      <p class="section-cta">Not on the list? Scripts, integrations, internal tools, data cleanups — if it's technical, I can build it. <a href="contact">Describe your problem →</a></p>
-    </div>
-  </section>
+        <a href="https://rukja-hidzama.si/" target="_blank" rel="noopener" class="project-card">
+          <div class="project-screenshot">
+            <img src="assets/rukja.png" alt="Rukja Hidzama screenshot" loading="lazy" />
+            <div class="project-overlay">
+              <span class="project-live">Live site →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Rukja Hidžama</h3>
+            <p class="project-type">Complete Website Creation</p>
+            <p>End-to-end website build — design, development, and deployment from scratch.</p>
+            <ul class="chips"><li>wordpress</li><li>full build</li><li>design</li></ul>
+          </div>
+        </a>
 
-  <section class="section section-dark" id="experience">
-    <div class="wrap">
-      <h2>Experience</h2>
-      <div class="experience-track">
-        <div class="exp-card current">
-          <h3>AI Context Expert</h3>
-          <div class="exp-org">Hypatos</div>
-          <div class="exp-meta">Jul 2026 – present · remote</div>
-          <p>Context layer for LLM document processing — schemas, prompts, evaluation sets.</p>
-          <div class="exp-stack">python · sql · llm apis · prompt engineering</div>
-        </div>
-        <div class="exp-card">
-          <h3>Lead Data Acquisition</h3>
-          <div class="exp-org">AQVC</div>
-          <div class="exp-meta">Apr – Jul 2026 · remote</div>
-          <p>Automated investor data pipelines with LLM agents and multi-stage QA.</p>
-          <div class="exp-stack">python · llm agents · apollo · airtable</div>
-        </div>
-        <div class="exp-card">
-          <h3>QA Engineer / SDET</h3>
-          <div class="exp-org">ABC Tech Group</div>
-          <div class="exp-meta">Feb 2025 – Apr 2026 · Tuzla</div>
-          <p>Quality ownership for multi-platform banking product — web, iOS, Android.</p>
-          <div class="exp-stack">test automation · testrail · api debugging</div>
-        </div>
-        <div class="exp-card">
-          <h3>Senior Data Engineer</h3>
-          <div class="exp-org">Falcony AI</div>
-          <div class="exp-meta">Oct 2024 – Feb 2025 · remote</div>
-          <p>BigQuery warehouses, ETL/ELT pipelines, Looker Studio dashboards on GCP.</p>
-          <div class="exp-stack">bigquery · gcp · looker studio · etl/elt</div>
-        </div>
-        <div class="exp-card">
-          <h3>Senior Data Engineer</h3>
-          <div class="exp-org">Quantox Technology</div>
-          <div class="exp-meta">Aug – Dec 2024 · remote</div>
-          <p>PySpark/Databricks platform — streaming data to gold-layer analytics.</p>
-          <div class="exp-stack">pyspark · databricks · streaming</div>
-        </div>
-        <div class="exp-card">
-          <h3>Data Engineer</h3>
-          <div class="exp-org">Endava</div>
-          <div class="exp-meta">Oct 2022 – Jul 2023 · Sarajevo</div>
-          <p>Airflow DAGs, SQL models on Snowflake and Oracle for real-time analytics.</p>
-          <div class="exp-stack">airflow · snowflake · oracle · python</div>
-        </div>
-        <div class="exp-card">
-          <h3>Data Engineer</h3>
-          <div class="exp-org">Virgin Pulse</div>
-          <div class="exp-meta">Oct 2020 – Sep 2022 · Tuzla</div>
-          <p>Production pipelines on Redshift and Snowflake, data quality improvements.</p>
-          <div class="exp-stack">redshift · snowflake · airflow · shell</div>
-        </div>
-        <div class="exp-card">
-          <h3>Software Developer</h3>
-          <div class="exp-org">Cape Ann Enterprises</div>
-          <div class="exp-meta">Feb 2018 – Oct 2019 · BiH</div>
-          <p>Angular, Drupal, JavaScript apps with Selenium UI testing.</p>
-          <div class="exp-stack">angular · drupal · javascript · selenium</div>
-        </div>
-        <div class="exp-card">
-          <h3>Programming Instructor</h3>
-          <div class="exp-org">Algorithmics &amp; Coding Giants</div>
-          <div class="exp-meta">Feb 2022 – present · remote</div>
-          <p>Python, C# and web fundamentals for students aged 6–18.</p>
-          <div class="exp-stack">python · c# · teaching</div>
-        </div>
+        <a href="https://misterdzirlo.info/" target="_blank" rel="noopener" class="project-card">
+          <div class="project-screenshot">
+            <img src="assets/dzirlo.png" alt="Mister Dzirlo screenshot" loading="lazy" />
+            <div class="project-overlay">
+              <span class="project-live">Live site →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Mister Dzirlo</h3>
+            <p class="project-type">WooCommerce Payment Setup</p>
+            <p>Payment integration and WooCommerce configuration for an existing site.</p>
+            <ul class="chips"><li>woocommerce</li><li>payments</li><li>wordpress</li></ul>
+          </div>
+        </a>
       </div>
       <p style="margin-top:12px; font-size:0.82rem; color:var(--muted);">← scroll →</p>
     </div>
@@ -162,29 +109,62 @@
 
   <section class="section">
     <div class="wrap">
-      <h2>Toolbox</h2>
-      <div class="grid-2">
-        <div class="card-slim">
-          <dl class="skills">
-            <dt>ai &amp; llm</dt>
-            <dd>Document processing, prompt engineering, RAG, evaluation, agent APIs, MCP tooling</dd>
-            <dt>backend</dt>
-            <dd>Python (FastAPI, Flask), REST APIs, async processing, C#</dd>
-            <dt>frontend</dt>
-            <dd>JavaScript, Angular, Vue.js, HTML/CSS — TypeScript/React learning</dd>
-          </dl>
+      <h2>Data Projects</h2>
+      <p class="section-lead">Data pipelines, visualization, and research projects.</p>
+      <div class="projects-track">
+        <div class="project-card">
+          <div class="project-screenshot">
+            <img src="assets/data feed.png" alt="Data Miner Insights screenshot" loading="lazy" />
+          </div>
+          <div class="project-info">
+            <h3>Data Miner Insights — Feeding App</h3>
+            <p class="project-type">Data Pipeline</p>
+            <p>Project for feeding and structuring investor data locally.</p>
+            <ul class="chips"><li>data pipeline</li><li>python</li><li>data engineering</li></ul>
+          </div>
         </div>
-        <div class="card-slim">
-          <dl class="skills">
-            <dt>data &amp; databases</dt>
-            <dd>SQL, PostgreSQL, Snowflake, BigQuery, Redshift; DBT, Airflow, PySpark, Databricks; ETL/ELT</dd>
-            <dt>cloud &amp; devops</dt>
-            <dd>GCP, AWS, Azure, Docker, Kubernetes, Git, Linux</dd>
-            <dt>quality</dt>
-            <dd>Selenium, TestRail, data validation, debugging, Agile/Scrum</dd>
-          </dl>
-        </div>
+
+        <a href="https://github.com/AjdinSalihovic/Data-Visualization-with-Python" target="_blank" rel="noopener" class="project-card">
+          <div class="project-screenshot">
+            <img src="assets/data visualization.png" alt="Data Visualization with Python" loading="lazy" />
+            <div class="project-overlay">
+              <span class="project-live">GitHub →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Data Visualization with Python</h3>
+            <p class="project-type">Visualization</p>
+            <p>Python-based data visualization projects and analysis notebooks.</p>
+            <ul class="chips"><li>python</li><li>matplotlib</li><li>visualization</li></ul>
+          </div>
+        </a>
+
+        <a href="https://github.com/AjdinSalihovic/Spotify-Data-Research" target="_blank" rel="noopener" class="project-card">
+          <div class="project-screenshot">
+            <img src="assets/spotify.png" alt="Spotify Data Research" loading="lazy" />
+            <div class="project-overlay">
+              <span class="project-live">GitHub →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Spotify Data Research</h3>
+            <p class="project-type">Research</p>
+            <p>Data research and analysis on Spotify listening patterns and trends.</p>
+            <ul class="chips"><li>python</li><li>data research</li><li>spotify api</li></ul>
+          </div>
+        </a>
       </div>
+      <p style="margin-top:12px; font-size:0.82rem; color:var(--muted);">← scroll →</p>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="wrap">
+      <h2>Want to work together?</h2>
+      <p class="section-lead">
+        I'm always open to interesting projects — whether it's web development, data engineering, or something in between.
+      </p>
+      <a class="btn btn-ghost" href="contact" style="margin-top:16px;">Get in touch →</a>
     </div>
   </section>
 </main>
