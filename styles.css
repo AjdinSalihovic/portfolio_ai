@@ -336,7 +336,13 @@ a.card:hover { border-color: var(--brand); }
   margin-bottom: 30px;
 }
 @media (max-width: 700px) { .details-grid { grid-template-columns: 1fr; } }
-.details-grid h3 { font-size: 0.95rem; margin-bottom: 8px; }
+.details-grid h3 {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+}
 .about-links {
   display: flex;
   align-items: center;
@@ -402,9 +408,19 @@ a.card:hover { border-color: var(--brand); }
   font-family: var(--font-body);
   font-size: 0.8rem;
   color: var(--brand);
-  margin-top: 16px;
+  margin-top: 18px;
+  letter-spacing: 0.02em;
 }
-.skills dd { margin: 4px 0 0; color: var(--muted); font-size: 0.95rem; }
+.skills dt:first-child { margin-top: 0; }
+.skills dd {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  padding-left: 12px;
+  border-left: 2px solid var(--line);
+  margin-top: 6px;
+  line-height: 1.5;
+}
 
 
 
