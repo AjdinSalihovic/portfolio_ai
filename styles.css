@@ -201,6 +201,7 @@ p { margin: 0 0 1em; }
 .hero .title-line { color: var(--brand); }
 .hero-sub { max-width: 520px; color: var(--muted); font-size: 1.05rem; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px; }
+.hero + .section { border-top: none; padding-top: 0; }
 
 .photo-placeholder {
   width: 300px;
