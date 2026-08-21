@@ -48,13 +48,5 @@
         stroke-width="2" 
         stroke-linecap="round"/>
   
-  <!-- Bottom tagline -->
-  <text x="600" y="500" 
-        font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" 
-        font-size="18" 
-        font-weight="400" 
-        fill="#8F5D18" 
-        text-anchor="middle"
-        letter-spacing="3"
-        text-transform="uppercase">AI Data Engineer · Machine Learning Engineer</text>
+
 </svg>
