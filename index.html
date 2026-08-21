@@ -7,7 +7,7 @@
   <meta name="description" content="Ajdin Salihović — AI Data Engineer and Machine Learning Engineer. LLM-powered document processing, production data pipelines, and automation. Based in Tuzla, Bosnia &amp; Herzegovina, working worldwide." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Google+Sans+Code:wght@400..600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAA/1BMVEUAAAAJIUIIID4APT0IIEAIID4AAFUIID4DJEcJIUAAAH8HHToIIT4IIEAIIEAAAD0EGUcCJjgIID4JIUEJIT4JID8IIUEGHj4IHj4HHz8IHz8GHkIAM2YAVVUAf38AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5OfUQAAAAQHRSTlMA+vMEbo4Dcw3VAhJQkLQEDA+wMDbGTC5LbNAqBQMCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7HAJrgAAATNJREFUeNrVUll2hDAMs8nKEkgoy0y3+x+zskOm/ZgeYMR7PIOFZDkQvQoMOe4EzBsNTwmJ0RS8PSV80zGzUDoXl08DeCJvFE0iNIF/UNCECK/RBsBORJMN1tqg7YVuMChOJKrSTNTXSgkDrcw7STNNMkzviFIvU+21/4EaqjsY46kC3stHfHukZI6wBc/JThjWd32ooTO0EpUhi2mO4p5H3Prs64gHyBowoLC0SZwV5Y18HQEB9zLGcZRWH9VEDZbaP/lCp9dEWSP2xV9LcO0gKmkleAJTNcCIwta1AZ3u2wjBt2OQcEfbuWwz6eZ5rG+ijMjRLHJ0cdm0FUWoXN9E1KHZEUm8Oz1OAZoz3swp1qevoAGcxEyn7vEa/jI0f/JcMXQl/N4IOC/8mvUH3X6NXx0/CRwJ69bFJ20AAAAASUVORK5CYII=" />
   <link rel="apple-touch-icon" href="assets/favicon-180.png" />
   <meta name="theme-color" content="#092140" />
@@ -42,25 +42,49 @@
 </header>
 
 <main>
-  <section class="hero wrap">
-    <p class="eyebrow">AI Data Engineer · Machine Learning Engineer</p>
-    <h1>Hi, I'm Ajdin.<br /><span class="title-line">I think in data.</span></h1>
-    <p class="hero-sub">
-      Eight years across software, data and AI. I build LLM-powered document processing,
-      production data pipelines, and the validation layers that make both trustworthy —
-      currently engineering the context layer behind AI document extraction at Hypatos.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="contact">Start a project</a>
-      <a class="btn btn-ghost" href="work">See my work</a>
+  <section class="hero">
+    <div class="hero-inner wrap">
+      <div class="hero-text">
+        <p class="eyebrow">AI Data Engineer · Machine Learning Engineer</p>
+        <h1>Hi, I'm Ajdin.<br /><span class="title-line">I think in data.</span></h1>
+        <p class="hero-sub">
+          Eight years across software, data and AI — LLM document processing,
+          production pipelines, and the validation that makes both trustworthy. Currently at Hypatos.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact">Start a project</a>
+          <a class="btn btn-ghost" href="work">See my work</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <!-- TODO: replace this with <img src="assets/ajdin.jpg" alt="Ajdin Salihović" /> -->
+        <div class="photo-placeholder">
+          <span>your photo<br />here</span>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <a class="promo reveal" href="https://substack.com/@dataminerinsights" target="_blank" rel="noopener">
-      <span class="field">substack</span>
-      <span class="promo-text"><b>@dataminerinsights</b> — 60K investors circling. Buy them or subscribe for the Friday drop.</span>
-      <span class="go">read on substack →</span>
-    </a>
+  <section class="section section-featured">
+    <div class="wrap">
+      <div class="featured-grid">
+        <div class="featured-text">
+          <p class="eyebrow">Featured</p>
+          <h2>LLM document extraction at Hypatos</h2>
+          <p>Turning contracts, invoices and scanned forms into structured data that businesses can actually trust. Building the context layer — extraction schemas, prompts, ground-truth datasets — that makes LLMs reliable on real documents.</p>
+          <ul class="chips"><li>python</li><li>llm apis</li><li>extraction schemas</li><li>evaluation</li></ul>
+          <a class="btn btn-ghost" href="work#experience" style="margin-top:20px;">See all work →</a>
+        </div>
+        <div class="featured-visual">
+          <div class="featured-img-placeholder">
+            <span>screenshot or diagram<br />of your work</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+<<<<<<< HEAD
     <figure class="pipeline" aria-label="Diagram: how I turn raw sources into served data">
       <svg viewBox="0 0 900 190" xmlns="http://www.w3.org/2000/svg" role="img">
         <title>Pipeline: sources, extract, validate, serve</title>
@@ -106,71 +130,49 @@
       <div class="stat reveal"><b>10+</b><span>data platforms in production</span></div>
       <div class="stat reveal"><b>1</b><span>msc program — data science</span></div>
       <div class="stat reveal"><b>4 yrs</b><span>teaching code, ages 6–18</span></div>
+=======
+  <section class="section-quote">
+    <div class="wrap">
+      <blockquote class="quote">
+        <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+        <p>Ajdin doesn't just build pipelines — he builds the validation layer that makes you trust them. That's rare.</p>
+        <cite>— a colleague who worked with him</cite>
+      </blockquote>
+>>>>>>> 0fdffcf (Update)
     </div>
   </section>
 
   <section class="section" id="about">
     <div class="wrap">
-      <p class="eyebrow">About me</p>
       <h2>How I got here.</h2>
-      <div class="grid-2">
-        <div>
-          <p>
-            I've spent eight years moving across the stack — web development, then QA, then data
-            engineering, and now AI. That path wasn't an accident: each stop taught me a habit
-            the next one needed. QA made me distrust every record until it's validated. Warehousing
-            taught me that pipelines fail at 3 a.m., so they'd better log well. LLM work taught me
-            that the model is only as good as the context you engineer around it.
-          </p>
-          <p>
-            Today I work on LLM-powered document processing — the unglamorous, high-value problem of
-            turning contracts, invoices and scanned forms into data a business can actually trust.
-            On the side, I take freelance projects and study financial engineering, because markets
-            are just another messy data source waiting for structure.
-          </p>
-        </div>
-        <div>
-          <p>
-            Since 2022 I've also taught programming to kids aged 6 to 18. Four years of explaining
-            recursion to ten-year-olds is the best communication training an engineer can get —
-            if you can't make it clear to them, you don't understand it well enough yourself.
-          </p>
-          <p>
-            Off the clock I post about data and AI as
-            <a href="https://www.instagram.com/ajdin_thinks_data/" target="_blank" rel="noopener">@ajdin_thinks_data</a>
-            — the handle is honest, it's how my brain works. I speak Bosnian and English fluently,
-            get by in Slovene, and I'm slowly convincing German to cooperate.
-          </p>
-        </div>
+      <div class="about-text">
+        <p>
+          Eight years across web dev, QA, data engineering, and now AI. Each stop taught me
+          something the next one needed — QA made me distrust unvalidated data, warehousing
+          taught me pipelines fail at 3 a.m., and LLM work showed me the model is only
+          as good as the context around it.
+        </p>
+        <p>
+          At Hypatos I turn contracts, invoices and scanned forms into structured data.
+          On the side, I freelance and study financial engineering. Since 2022 I've also
+          taught programming to kids aged 6 to 18.
+        </p>
       </div>
 
-      <div class="grid-3" style="margin-top:30px;">
-        <div class="card reveal">
-          <span class="field">education</span>
+      <div class="details-grid">
+        <div>
+          <h3>Education</h3>
           <dl class="skills">
             <dt>msc financial engineering</dt>
-            <dd>WorldQuant University · Apr 2025 – Sep 2027 (in progress, remote)</dd>
+            <dd>WorldQuant University · in progress, remote</dd>
             <dt>msc data science</dt>
-            <dd>International Burch University · Sarajevo, BiH</dd>
+            <dd>International Burch University · Sarajevo</dd>
             <dt>beng information technology</dt>
-            <dd>American University in BiH · 2014 – 2018 · Dean's List</dd>
+            <dd>American University in BiH · Dean's List</dd>
           </dl>
         </div>
-        <div class="card reveal">
-          <span class="field">certifications</span>
-          <ul class="chips">
-            <li>Google Data Analytics (Professional)</li>
-            <li>AI for Product Management — Google Cloud / Pendo</li>
-            <li>Product Analytics — Pendo</li>
-            <li>Data Analysis using Python — IBM</li>
-            <li>Deep Learning Essentials — IBM</li>
-            <li>Python for Data Science — IBM</li>
-            <li>Cybersecurity Fundamentals — CYBER501x</li>
-            <li>The 365 Data Science Program</li>
-          </ul>
-        </div>
-        <div class="card reveal">
-          <span class="field">languages</span>
+        <div>
+          <h3>Languages</h3>
           <dl class="skills">
             <dt>bosnian</dt><dd>Native</dd>
             <dt>english</dt><dd>C2 — full professional fluency</dd>
@@ -179,60 +181,26 @@
           </dl>
         </div>
       </div>
-      <div class="hero-actions about-cta" style="margin-top:34px;">
+
+      <p class="about-links">
         <a class="btn btn-primary" href="contact">Get in touch</a>
-        <span class="social-row">
-          <a class="social-btn" href="https://substack.com/@dataminerinsights" target="_blank" rel="noopener" aria-label="Substack — @dataminerinsights"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.539 24V10.812H1.46zM22.539 0H1.46v2.836h21.08V0z"/></svg></a>
-          <a class="social-btn" href="https://github.com/AjdinSalihovic" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.68.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a>
-          <a class="social-btn" href="https://www.linkedin.com/in/ajdin-salihovic/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
-          <a class="social-btn" href="https://www.instagram.com/ajdin_thinks_data/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13a5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg></a>
-        </span>
-      </div>
+        <a href="https://substack.com/@dataminerinsights" target="_blank" rel="noopener">substack</a> ·
+        <a href="https://github.com/AjdinSalihovic" target="_blank" rel="noopener">github</a> ·
+        <a href="https://www.linkedin.com/in/ajdin-salihovic/" target="_blank" rel="noopener">linkedin</a> ·
+        <a href="https://www.instagram.com/ajdin_thinks_data/" target="_blank" rel="noopener">instagram</a>
+      </p>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-dark">
     <div class="wrap">
-      <p class="eyebrow">Explore</p>
-      <h2>Two ways in.</h2>
-      <div class="grid-2">
-        <a class="card reveal" href="work">
-          <span class="field">section</span>
-          <h3>Work</h3>
-          <p>What I build for clients — document automation, data pipelines, scraping &amp; enrichment, dashboards — and the eight-year record behind it.</p>
-          <span class="go">view services &amp; experience →</span>
-        </a>
-        <a class="card reveal" href="contact">
-          <span class="field">section</span>
-          <h3>Contact</h3>
-          <p>A pipeline to build, documents to structure, or just a question — one message away, answered personally.</p>
-          <span class="go">say hello →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <p class="eyebrow">Right now</p>
-      <h2>Current focus.</h2>
-      <div class="record reveal">
-        <div class="record-head">
-          <h3>AI Context Expert</h3>
-          <span class="record-org">Hypatos</span>
-          <span class="badge-current">current</span>
-        </div>
-        <div class="record-meta">
-          <span><span class="field">period</span> Jul 2026 – present</span>
-          <span><span class="field">location</span> Germany (remote)</span>
-        </div>
-        <ul>
-          <li>Engineering the context layer behind LLM-based document processing — extraction schemas, prompts and ground-truth datasets.</li>
-          <li>Building evaluation sets and error taxonomies that feed back into engineering and raise extraction accuracy.</li>
-        </ul>
-        <p class="stack-line">python · sql · llm apis · prompt &amp; context engineering</p>
-      </div>
-      <a class="btn btn-ghost" href="work#experience">Full experience →</a>
+      <h2>Currently at <span style="color:var(--signal)">Hypatos</span></h2>
+      <p class="section-lead">
+        Engineering the context layer behind LLM document processing — extraction schemas,
+        prompts and ground-truth datasets. Building evaluation sets that raise extraction accuracy.
+      </p>
+      <p class="stack-line">python · sql · llm apis · prompt &amp; context engineering</p>
+      <a class="btn btn-ghost" href="work#experience" style="margin-top:16px;">Full experience →</a>
     </div>
   </section>
 </main>
