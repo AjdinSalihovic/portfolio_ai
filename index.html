@@ -15,6 +15,7 @@
   <!-- Open Graph / Social Media Preview -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Ajdin Salihović — Portfolio" />
+  <meta property="og:description" content="AI Data Engineer and Machine Learning Engineer — LLM document processing, production data pipelines, and automation." />
   <meta property="og:image" content="https://ajdinsalihovic.github.io/portfolio_ai/assets/preview.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -23,10 +24,30 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ajdin Salihović — Portfolio" />
   <meta name="twitter:image" content="https://ajdinsalihovic.github.io/portfolio_ai/assets/preview.jpg" />
-  
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ajdin Salihović",
+    "jobTitle": "AI Data Engineer & Machine Learning Engineer",
+    "worksFor": { "@type": "Organization", "name": "Hypatos" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Tuzla", "addressCountry": "BA" },
+    "email": "mailto:ajdin-salihovic@outlook.com",
+    "url": "https://ajdinsalihovic.github.io/portfolio_ai/",
+    "sameAs": [
+      "https://github.com/AjdinSalihovic",
+      "https://www.linkedin.com/in/ajdin-salihovic/",
+      "https://www.instagram.com/ajdin_thinks_data/"
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="nav">
   <div class="nav-inner">
@@ -58,7 +79,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero">
     <div class="hero-inner wrap">
       <div class="hero-text">
@@ -74,7 +95,9 @@
         </div>
       </div>
       <div class="hero-photo">
-        <img src="assets/ajdin.jpg" alt="Ajdin Salihović" class="hero-img" />
+        <span class="reg-frame">
+          <img src="assets/ajdin.jpg" alt="Ajdin Salihović" class="hero-img" width="400" height="400" fetchpriority="high" />
+        </span>
       </div>
     </div>
   </section>
@@ -89,7 +112,54 @@
           <ul class="chips"><li>python</li><li>llm apis</li><li>extraction schemas</li><li>evaluation</li></ul>
           <a class="btn btn-ghost" href="work#experience" style="margin-top:20px;">See all work →</a>
         </div>
-       
+
+        <div class="featured-visual reg-frame">
+          <!-- schematic: a scanned document is extracted through a schema
+               into a validated structured record. Decorative — the text
+               on the left says the same thing. -->
+          <svg class="pipeline" viewBox="0 0 540 320" aria-hidden="true" focusable="false">
+            <!-- document -->
+            <path class="pipe-doc" d="M60 70 h112 l24 24 v161 a6 6 0 0 1 -6 6 H66 a6 6 0 0 1 -6 -6 V76 a6 6 0 0 1 6 -6 Z" />
+            <path class="pipe-fold" d="M172 70 v24 h24 Z" />
+            <!-- document text lines -->
+            <rect class="pipe-line" x="78" y="90"  width="72"  height="9" rx="4.5" />
+            <rect class="pipe-line" x="78" y="108" width="100" height="6" rx="3" />
+            <rect class="pipe-field" x="78" y="124" width="106" height="7" rx="3.5" />
+            <rect class="pipe-line" x="78" y="141" width="96"  height="6" rx="3" />
+            <rect class="pipe-line" x="78" y="156" width="84"  height="6" rx="3" />
+            <rect class="pipe-field" x="78" y="172" width="96"  height="7" rx="3.5" />
+            <rect class="pipe-line" x="78" y="189" width="100" height="6" rx="3" />
+            <rect class="pipe-line" x="78" y="204" width="76"  height="6" rx="3" />
+            <rect class="pipe-field" x="78" y="220" width="86"  height="7" rx="3.5" />
+            <rect class="pipe-line" x="78" y="237" width="92"  height="6" rx="3" />
+            <!-- scan sweep -->
+            <line class="pipe-scan" x1="68" y1="86" x2="188" y2="86" />
+            <!-- wires: document → schema → record -->
+            <path class="pipe-wire" d="M196 128 C 232 128 232 150 262 150 L 322 150 C 352 150 352 118 388 118" />
+            <path class="pipe-wire" d="M196 176 C 232 176 232 170 262 170 L 322 170 C 352 170 352 156 388 156" />
+            <path class="pipe-wire" d="M196 224 C 232 224 232 190 262 190 L 322 190 C 352 190 352 194 388 194" />
+            <!-- schema gate -->
+            <rect class="pipe-gate" x="262" y="118" width="60" height="94" rx="10" />
+            <text class="pipe-glyph" x="292" y="176" text-anchor="middle">{ }</text>
+            <!-- structured record -->
+            <rect class="pipe-card" x="388" y="66" width="140" height="192" rx="8" />
+            <text class="pipe-key" x="402" y="110">supplier</text>
+            <text class="pipe-val" x="402" y="126">Deneb GmbH</text>
+            <line class="pipe-rule" x1="402" y1="136" x2="514" y2="136" />
+            <text class="pipe-key" x="402" y="150">invoice_no</text>
+            <text class="pipe-val" x="402" y="166">INV-2184</text>
+            <line class="pipe-rule" x1="402" y1="176" x2="514" y2="176" />
+            <text class="pipe-key" x="402" y="190">total</text>
+            <text class="pipe-val" x="402" y="206">2 184.00 EUR</text>
+            <!-- validation check -->
+            <circle class="pipe-check-bg" cx="414" cy="234" r="11" />
+            <path class="pipe-check" d="M408.5 234 l4 4.5 l7.5 -9" />
+            <!-- travelling data dots -->
+            <circle class="pipe-dot pipe-dot-1" cx="388" cy="118" r="4" />
+            <circle class="pipe-dot pipe-dot-2" cx="388" cy="156" r="4" />
+            <circle class="pipe-dot pipe-dot-3" cx="388" cy="194" r="4" />
+          </svg>
+        </div>
       </div>
     </div>
   </section>
@@ -147,7 +217,7 @@
 
   <section class="section section-dark">
     <div class="wrap">
-      <h2>Currently at <span style="color:var(--signal)">Hypatos</span></h2>
+      <h2>Currently at <span style="color:var(--signal-bright)">Hypatos</span></h2>
       <p class="section-lead">
         Engineering the context layer behind LLM document processing — extraction schemas,
         prompts and ground-truth datasets. Building evaluation sets that raise extraction accuracy.

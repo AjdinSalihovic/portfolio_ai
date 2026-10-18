@@ -100,6 +100,11 @@
     "GCP, AWS, Azure, Docker, Kubernetes, Git, Linux": "GCP, AWS, Azure, Docker, Kubernetes, Git, Linux",
     "Selenium, TestRail, data validation, debugging, Agile/Scrum": "Selenium, TestRail, validacija podataka, debugging, Agile/Scrum",
 
+    // ---- a11y + form validation ----
+    "Skip to content": "Preskoči na sadržaj",
+    "Please enter your name.": "Molimo unesite svoje ime.",
+    "Please enter a valid email address.": "Molimo unesite ispravnu email adresu.",
+    "Please write a message.": "Molimo napišite poruku.",
     // ---- contact page ----
     "Contact": "Kontakt",
     "Questions, ideas,or a project brief?": "Pitanja, ideje,<br /><span class=\"title-line\">ili projektni zadatak?</span>",
@@ -249,6 +254,11 @@
     "GCP, AWS, Azure, Docker, Kubernetes, Git, Linux": "GCP, AWS, Azure, Docker, Kubernetes, Git, Linux",
     "Selenium, TestRail, data validation, debugging, Agile/Scrum": "Selenium, TestRail, Datenvalidierung, Debugging, Agile/Scrum",
 
+    // ---- a11y + form validation ----
+    "Skip to content": "Zum Inhalt springen",
+    "Please enter your name.": "Bitte geben Sie Ihren Namen ein.",
+    "Please enter a valid email address.": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "Please write a message.": "Bitte schreiben Sie eine Nachricht.",
     // ---- contact page ----
     "Contact": "Kontakt",
     "Questions, ideas,or a project brief?": "Fragen, Ideen<br /><span class=\"title-line\">oder ein Projektbriefing?</span>",
@@ -398,6 +408,11 @@
     "GCP, AWS, Azure, Docker, Kubernetes, Git, Linux": "GCP, AWS, Azure, Docker, Kubernetes, Git, Linux",
     "Selenium, TestRail, data validation, debugging, Agile/Scrum": "Selenium, TestRail, validacija podatkov, odpravljanje napak, Agile/Scrum",
 
+    // ---- a11y + form validation ----
+    "Skip to content": "Preskoči na vsebino",
+    "Please enter your name.": "Prosimo, vnesite svoje ime.",
+    "Please enter a valid email address.": "Prosimo, vnesite veljaven e-poštni naslov.",
+    "Please write a message.": "Prosimo, napišite sporočilo.",
     // ---- contact page ----
     "Contact": "Kontakt",
     "Questions, ideas,or a project brief?": "Vprašanja, ideje<br /><span class=\"title-line\">ali projektna naloga?</span>",

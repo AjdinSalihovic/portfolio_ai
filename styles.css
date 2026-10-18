@@ -750,3 +750,178 @@ h3 .icon { width: 18px; height: 18px; vertical-align: -2px; margin-right: 2px; }
   h1 { font-size: 2.1rem; }
   .nav-links a { padding: 6px 8px; font-size: 0.78rem; }
 }
+
+/* ============================================================
+   2026 refresh — pipeline figure, page transitions, form states
+   ============================================================ */
+
+:root { color-scheme: light; }
+
+/* ---- skip link (keyboard users) ---- */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 100;
+  background: var(--brand);
+  color: var(--paper);
+  padding: 10px 18px;
+  border-radius: 0 0 8px 8px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus-visible { top: 0; color: var(--paper); outline-color: var(--signal-bright); }
+
+/* ---- cross-document view transitions (progressive enhancement) ---- */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+
+  ::view-transition-old(root) { animation: 150ms ease-in both vt-out; }
+  ::view-transition-new(root) { animation: 230ms ease-out both vt-in; }
+
+  /* nav and footer keep still while the page content transitions */
+  .nav    { view-transition-name: site-nav; }
+  .footer { view-transition-name: site-footer; }
+}
+@keyframes vt-out { to   { opacity: 0; } }
+@keyframes vt-in  { from { opacity: 0; transform: translateY(10px); } }
+
+/* ---- registration-mark frame (drafting crop marks) ---- */
+.reg-frame { position: relative; display: inline-block; padding: 12px; }
+.reg-frame::before,
+.reg-frame::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+}
+.reg-frame::before {
+  top: 0; left: 0;
+  border-top: 2px solid var(--signal-bright);
+  border-left: 2px solid var(--signal-bright);
+}
+.reg-frame::after {
+  bottom: 0; right: 0;
+  border-bottom: 2px solid var(--signal-bright);
+  border-right: 2px solid var(--signal-bright);
+}
+
+/* ---- extraction pipeline figure (featured section) ---- */
+.featured-visual { position: relative; }
+.featured-visual.reg-frame { display: block; padding: 16px; }
+.pipeline {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.pipe-doc      { fill: var(--panel); stroke: var(--brand); stroke-width: 1.5; }
+.pipe-fold     { fill: var(--brand-soft); stroke: var(--brand); stroke-width: 1.5; }
+.pipe-line     { fill: var(--line); }
+.pipe-field    { fill: var(--signal-bright); opacity: 0.85; }
+.pipe-gate     { fill: none; stroke: var(--brand); stroke-width: 1.5; stroke-dasharray: 5 5; }
+.pipe-glyph    { font-family: var(--font-display); font-weight: 800; font-size: 30px; fill: var(--brand); }
+.pipe-wire     { fill: none; stroke: var(--line); stroke-width: 1.5; }
+.pipe-card     { fill: var(--panel); stroke: var(--brand); stroke-width: 1.5; }
+.pipe-key      { font-family: var(--font-body); font-size: 11px; fill: var(--muted); }
+.pipe-val      { font-family: var(--font-body); font-weight: 600; font-size: 12px; fill: var(--brand); }
+.pipe-rule     { stroke: var(--line); stroke-width: 1; }
+.pipe-check-bg { fill: none; stroke: var(--signal-bright); stroke-width: 1.5; }
+.pipe-check    { fill: none; stroke: var(--signal); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.pipe-dot      { fill: var(--signal-bright); }
+.pipe-scan     { stroke: var(--signal-bright); stroke-width: 1.5; opacity: 0; }
+
+/* animation: brass data dots travel document → schema → record,
+   while a scan line sweeps the document. One quiet loop. */
+/* dots carry cx/cy at their resting (arrival) positions, so with motion
+   off they simply sit at the record card; with motion on, offset-path
+   takes over and they travel the wires. */
+@media (prefers-reduced-motion: no-preference) {
+  .pipe-dot {
+    offset-rotate: 0deg;
+    animation: pipe-travel 4.2s cubic-bezier(0.45, 0, 0.35, 1) infinite;
+  }
+  .pipe-dot-1 { offset-path: path("M196 128 C 232 128 232 150 262 150 L 322 150 C 352 150 352 118 388 118"); }
+  .pipe-dot-2 { offset-path: path("M196 176 C 232 176 232 170 262 170 L 322 170 C 352 170 352 156 388 156"); animation-delay: 1.4s; }
+  .pipe-dot-3 { offset-path: path("M196 224 C 232 224 232 190 262 190 L 322 190 C 352 190 352 194 388 194"); animation-delay: 2.8s; }
+  .pipe-scan  { animation: pipe-scan 4.2s ease-in-out infinite; }
+}
+@keyframes pipe-travel {
+  0%   { offset-distance: 0%;   opacity: 0; }
+  8%   { opacity: 1; }
+  82%  { opacity: 1; }
+  92%, 100% { offset-distance: 100%; opacity: 0; }
+}
+@keyframes pipe-scan {
+  0%   { transform: translateY(0);    opacity: 0; }
+  10%  { opacity: 0.8; }
+  40%  { transform: translateY(150px); opacity: 0.8; }
+  52%, 100% { transform: translateY(150px); opacity: 0; }
+}
+
+/* ---- horizontal tracks: containment + hint ---- */
+.experience-track,
+.projects-track { overscroll-behavior-x: contain; }
+.scroll-hint {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  text-align: center;
+  margin: 10px 0 0;
+}
+.section-dark .scroll-hint { color: rgba(255, 255, 255, 0.45); }
+
+/* stack line used outside records (index dark section) */
+.stack-line { font-family: var(--font-body); font-size: 0.82rem; letter-spacing: 0.03em; }
+.section-dark .stack-line { color: var(--signal-bright); }
+
+/* ---- contact form: validate after interaction ---- */
+.error-msg {
+  display: none;
+  margin: 6px 0 0;
+  font-size: 0.82rem;
+  color: #9B2318;
+}
+.form input:user-invalid,
+.form textarea:user-invalid {
+  border-color: #B3261E;
+  background: #FBF0EE;
+}
+.form input:user-invalid + .error-msg,
+.form textarea:user-invalid + .error-msg { display: block; }
+.form input:user-valid,
+.form textarea:user-valid { border-color: #2E7D43; }
+
+/* submit button busy state */
+.form button[aria-busy="true"] {
+  opacity: 0.75;
+  pointer-events: none;
+  position: relative;
+  padding-right: 42px;
+}
+.form button[aria-busy="true"]::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  margin-top: -7px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: var(--paper);
+  border-radius: 50%;
+  animation: btn-spin 0.7s linear infinite;
+}
+@keyframes btn-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .form button[aria-busy="true"]::after { animation: none; border-top-color: rgba(255,255,255,0.35); }
+}
+
+/* ---- print: keep it on one clean sheet ---- */
+@media print {
+  .lang-switch, .scroll-hint, .skip-link, .hero-actions, .project-overlay { display: none !important; }
+  .nav { position: static; }
+  body { background: #fff; }
+}

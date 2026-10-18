@@ -15,6 +15,7 @@
   <!-- Open Graph / Social Media Preview -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Ajdin Salihović — Portfolio" />
+  <meta property="og:description" content="Send a project inquiry or a question — replies come personally, usually within a day." />
   <meta property="og:image" content="https://ajdinsalihovic.github.io/portfolio_ai/assets/preview.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -27,6 +28,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="nav">
   <div class="nav-inner">
@@ -58,7 +61,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Contact</p>
@@ -83,13 +86,16 @@
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
         <label for="name">name</label>
-        <input id="name" type="text" name="name" required autocomplete="name" placeholder="Your name" />
+        <input id="name" type="text" name="name" required autocomplete="name" placeholder="Your name" aria-describedby="name-error" />
+        <p class="error-msg" id="name-error">Please enter your name.</p>
 
         <label for="email">email</label>
-        <input id="email" type="email" name="email" required autocomplete="email" placeholder="you@company.com" />
+        <input id="email" type="email" name="email" required autocomplete="email" placeholder="you@company.com" aria-describedby="email-error" />
+        <p class="error-msg" id="email-error">Please enter a valid email address.</p>
 
         <label for="message">message</label>
-        <textarea id="message" name="message" required placeholder="What are you building? What data is involved, and what should the result look like?"></textarea>
+        <textarea id="message" name="message" required placeholder="What are you building? What data is involved, and what should the result look like?" aria-describedby="message-error"></textarea>
+        <p class="error-msg" id="message-error">Please write a message.</p>
 
         <button class="btn btn-primary" type="submit">Send message</button>
         <a class="btn btn-ghost" id="mailto-fallback" href="mailto:ajdin-salihovic@outlook.com" style="margin-left:10px;">Open in your email app</a>
